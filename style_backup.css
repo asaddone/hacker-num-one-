@@ -1,0 +1,449 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
+
+/* ==========================
+   CSS RESET
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* ==========================
+   ROOT COLORS (Hacker Theme)
+========================== */
+:root{
+
+    --bg:#050505;
+    --bg2:#0d1117;
+
+    --green:#00ff41;
+    --cyan:#00e5ff;
+    --red:#ff1744;
+    --blue:#2979ff;
+    --yellow:#ffd600;
+    --white:#ffffff;
+    --gray:#9e9e9e;
+
+    --shadow:0 0 10px #00ff41,
+             0 0 20px #00ff41,
+             0 0 30px #00ff41;
+
+    --radius:15px;
+    --transition:.3s ease;
+}     html{
+    scroll-behavior: smooth;
+}
+
+/* ==========================
+   BODY
+========================== */
+body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:'JetBrains Mono', monospace;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+h1{
+    font-size:3.5rem;
+    color:var(--green);
+    text-shadow:var(--shadow);
+}
+
+h2{
+    font-size:2rem;
+    color:var(--cyan);
+    margin:20px 0;
+}
+
+h3{
+    color:var(--yellow);
+}   header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #000;
+    padding: 20px;
+}
+
+/* ==========================
+   PARAGRAPH
+========================== */
+p{
+    color:var(--gray);
+    font-size:18px;
+    margin:15px 0;
+}
+
+/* ==========================
+   LINKS
+========================== */
+a{
+    color:var(--cyan);
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+a:hover{
+    color:var(--green);
+    text-shadow:var(--shadow);
+}nav a{
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ff00;
+    text-shadow:0 0 10px #00ff00;
+}
+
+/* ==========================
+   IMAGES
+========================== */
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================
+   SECTION
+========================== */
+section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 0;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--green);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--cyan);
+}
+
+/* ==========================
+   TEXT SELECTION
+========================== */
+::selection{
+    background:var(--green);
+    color:#000;
+}
+   /* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:var(--green);
+    text-shadow:var(--shadow);
+    margin:10px 0;
+}
+
+.hero h2{
+    color:var(--white);
+    font-size:2rem;
+}
+
+.hero h3{
+    color:var(--cyan);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:18px;
+    color:var(--gray);
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero button{
+    padding:14px 30px;
+    font-size:16px;
+    border:none;
+    border-radius:10px;
+    background:var(--green);
+    color:#000;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.hero button:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+/* ==========================
+   CARD DESIGN
+========================== */
+
+.card{
+    background: var(--bg2);
+    border: 2px solid var(--green);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    transition: .3s ease;
+    box-shadow: 0 0 10px rgba(0,255,65,.2);
+#typing{
+    color:#00e5ff;
+    font-size:30px;
+    font-family:monospace;
+    text-align:center;
+    margin-top:20px;
+    min-height:40px;
+}}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px var(--green);
+}
+
+.card h2{
+    margin-bottom: 15px;
+}
+
+.card p{
+    line-height: 1.8;
+}
+#matrix{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background:black;
+}
+
+.skill{
+    margin:20px 0;
+}
+
+.bar{
+    width:100%;
+    height:20px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.bar div{
+    height:100%;
+    background:#00ff00;
+    animation:fill 2s forwards;
+}
+
+.html{
+    width:90%;
+}
+
+.css{
+    width:80%;
+}
+
+.js{
+    width:60%;
+}
+
+.linux{
+    width:70%;
+}
+
+@keyframes fill{
+    from{
+        width:0;
+    }
+}
+.terminal-box{
+    background:#000;
+    color:#00ff00;
+    border:2px solid #00ff00;
+    padding:20px;
+    margin:40px auto;
+    width:90%;
+    max-width:700px;
+    font-family:monospace;
+    min-height:180px;
+    box-shadow:0 0 20px #00ff00;
+}
+.calculator{
+    width:320px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.calculator input{
+    grid-column:span 4;
+    height:50px;
+    font-size:22px;
+    text-align:right;
+    padding:10px;
+    background:#111;
+    color:#00ff00;
+    border:2px solid #00ff00;
+}
+
+.calculator button{
+    height:60px;
+    font-size:20px;
+    background:#111;
+    color:#00ff00;
+    border:2px solid #00ff00;
+    cursor:pointer;
+}
+
+.calculator button:hover{
+    background:#00ff00;
+    color:#000;
+}
+
+.login-box{
+    width:350px;
+    margin:40px auto;
+    padding:20px;
+    background:#111;
+    border:2px solid #00ff00;
+    box-shadow:0 0 20px #00ff00;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    background:#000;
+    color:#00ff00;
+    border:1px solid #00ff00;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    background:#00ff00;
+    color:#000;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#00cc00;
+}
+
+#result{
+    margin-top:15px;
+    color:#00ff00;
+}
+#todo{
+    width:90%;
+    max-width:600px;
+    margin:40px auto;
+    text-align:center;
+}
+
+#todo input{
+    width:70%;
+    padding:10px;
+    background:#111;
+    color:#00ff00;
+    border:2px solid #00ff00;
+    border-radius:5px;
+}
+
+#todo button{
+    padding:10px 20px;
+    background:#00ff00;
+    color:#000;
+    border:none;
+    cursor:pointer;
+    margin-left:10px;
+    border-radius:5px;
+}
+
+#todo button:hover{
+    background:#00cc00;
+}
+
+#taskList{
+    list-style:none;
+    margin-top:20px;
+    padding:0;
+}
+
+#taskList li{
+    background:#111;
+    color:#00ff00;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #00ff00;
+    border-radius:5px;
+}
+#password{
+    width:90%;
+    max-width:600px;
+    margin:40px auto;
+    text-align:center;
+}
+
+#password input{
+    width:80%;
+    padding:12px;
+    background:#111;
+    color:#00ff00;
+    border:2px solid #00ff00;
+    margin-bottom:15px;
+}
+
+#password button{
+    padding:12px 20px;
+    background:#00ff00;
+    color:#000;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#password button:hover{
+    background:#00cc00;
+}

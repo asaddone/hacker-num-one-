@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad Website</title>
+
+
+         <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<canvas id="matrix"></canvas>
+<header>
+
+    <h1>ASAD WEBSITE</h1>
+
+    <nav>
+       <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+    </nav>
+
+</header>
+<main>  <section class="hero" id="home">
+
+    <h2 id="typing"></h2>
+
+    <h1>ASAD ALI</h1>
+
+    <h3>Cyber Security Student | Future Ethical Hacker</h3>
+
+    <p>
+        Learning HTML, CSS, JavaScript, Linux and Ethical Hacking.
+        Building secure websites and improving my skills every day.
+    </p>
+
+    <div class="hero-buttons">
+        <button onclick="welcome()">Start Learning</button>
+        <button onclick="showSkills()">My Skills</button>
+    </div><div class="weather-box">
+    <h2>🌤 Weather</h2>
+    <input type="text" id="city" placeholder="Enter City">
+    <button onclick="getWeather()">Search</button>
+
+    <div id="weatherResult"></div>
+</div>
+<div class="clock-box">
+    <h2>🕒 Current Time</h2>
+    <div id="clock">00:00:00</div>  <p id="date"></p>
+</div>
+</section>
+
+<div class="container">
+
+    <section id="about" class="card">
+
+    <h2>About Me</h2>
+
+    <p>
+        Hi, I'm <strong>Asad Ali</strong>, a Cyber Security student who enjoys learning
+        HTML, CSS, JavaScript, Linux, Networking and Ethical Hacking.
+    </p>
+
+    <p>
+        My goal is to become a professional Ethical Hacker and build secure,
+        modern websites.
+    </p>
+
+</section>
+<section id="terminal">
+    <h2>Live Terminal</h2>
+
+    <div class="terminal-box">
+        <p id="terminalText"></p>
+    </div>
+</section>
+   <section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <p>HTML - 90%</p>
+        <div class="bar"><div class="html"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS - 80%</p>
+        <div class="bar"><div class="css"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>JavaScript - 60%</p>
+        <div class="bar"><div class="js"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Linux - 70%</p>
+        <div class="bar"><div class="linux"></div></div>
+    </div><div class="notes-box">
+    <h2>📝 Notes App</h2>
+
+    <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+
+    <br>
+
+    <button onclick="saveNote()">Save Note</button>
+    <button onclick="loadNote()">Load Note</button>
+    <button onclick="deleteNote()">Delete Note</button>
+</div>
+</section>
+
+    <section id="contact" class="card">
+
+        <h2>📞 Contact</h2>
+
+        <p>Email: your@email.com</p>
+
+        <p>Phone: +92XXXXXXXXXX</p>
+
+    </section>
+
+    <section class="card">
+
+        <h2>🎯 My Goals</h2>
+
+        <ol>
+            <li>Learn HTML</li>
+            <li>Learn CSS</li>
+            <li>Master JavaScript</li>
+            <li>Become a Cyber Security Expert</li>
+        </ol>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Asad Website | All Rights Reserved</p>
+</footer>
+
+</main>
+       <section id="calculator">
+    <h2>Calculator</h2>
+
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+
+        <button onclick="addValue('7')">7</button>
+        <button onclick="addValue('8')">8</button>
+        <button onclick="addValue('9')">9</button>
+        <button onclick="addValue('/')">/</button>
+
+        <button onclick="addValue('4')">4</button>
+        <button onclick="addValue('5')">5</button>
+        <button onclick="addValue('6')">6</button>
+        <button onclick="addValue('*')">*</button>
+
+        <button onclick="addValue('1')">1</button>
+        <button onclick="addValue('2')">2</button>
+        <button onclick="addValue('3')">3</button>
+        <button onclick="addValue('-')">-</button>
+
+        <button onclick="addValue('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="addValue('+')">+</button>
+    </div>
+</section>    <section id="login">
+    <h2>Secure Login</h2>
+
+    <div class="login-box">
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="result"></p>
+    </div>
+</section> <section id="todo">
+    <h2>My To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+</section>  <section id="password">
+    <h2>Password Generator</h2>
+
+    <input type="text" id="passwordBox" readonly>
+
+    <button onclick="generatePassword()">Generate Password</button>
+</section>    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+	
+
+
+
+
+
+
+
+

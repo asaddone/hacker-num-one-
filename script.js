@@ -261,3 +261,36 @@ function typeLine(){
 window.addEventListener("load", () => {
     setTimeout(typeLine,1000);
 });
+function counter(id,target){
+    let count=0;
+    let speed=30;
+
+    let update=setInterval(()=>{
+        count++;
+        document.getElementById(id).innerText=count;
+
+        if(count>=target){
+            clearInterval(update);
+        }
+    },speed);
+}
+
+counter("projectsCount",15);
+counter("clientsCount",20);
+counter("experienceCount",12);
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+    if(document.body.scrollTop>200 || document.documentElement.scrollTop>200){
+        topBtn.style.display="block";
+    }else{
+        topBtn.style.display="none";
+    }
+};
+
+function topFunction(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}

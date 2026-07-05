@@ -294,3 +294,63 @@ function topFunction(){
         behavior:"smooth"
     });
 }
+const words = [
+    "Web Developer",
+    "Frontend Developer",
+    "Cyber Security Student",
+    "Programmer"
+];
+
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+
+function typeEffect(){
+
+    currentWord = words[i];
+
+    if(!isDeleting){
+        document.getElementById("typing").textContent =
+        currentWord.substring(0,j++);
+    }else{
+        document.getElementById("typing").textContent =
+        currentWord.substring(0,j--);
+    }
+
+    let speed = isDeleting ? 50 : 100;
+
+    if(!isDeleting && j === currentWord.length + 1){
+        speed = 1200;
+        isDeleting = true;
+    }
+
+    if(isDeleting && j === 0){
+        isDeleting = false;
+        i = (i + 1) % words.length;
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click",()=>{
+
+    document.body.classList.toggle("light-theme");
+
+    if(document.body.classList.contains("light-theme")){
+        themeBtn.innerHTML="☀";
+    }else{
+        themeBtn.innerHTML="🌙";
+    }
+
+});
+
+window.addEventListener("load",function(){
+
+    document.getElementById("loader").style.display="none";
+
+});

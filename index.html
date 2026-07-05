@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asad Website</title>
@@ -9,12 +10,14 @@
          <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body> <div id="loader">
+    <div class="spinner"></div>
+</div>
 <canvas id="matrix"></canvas>
 <header class="navbar">
     <div class="logo">ASAD<span>DEV</span></div>
 
-    <nav>
+    <nav> <button id="themeBtn">🌙</button>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -40,7 +43,7 @@
     <h1>ASAD ALI</h1>
 
     <h3>Cyber Security Student | Future Ethical Hacker</h3>
-
+<h3>I am <span id="typing"></span></h3>
     <p>
         Learning HTML, CSS, JavaScript, Linux and Ethical Hacking.
         Building secure websites and improving my skills every day.
@@ -68,7 +71,7 @@
 
 <div class="container">
 
-    <section id="about" class="card">
+    <section id="about" data-aos="fade-up">
 
     <h2>About Me</h2>
 
@@ -90,7 +93,7 @@
         <p id="terminalText"></p>
     </div>
 </section>
-   <section id="skills">
+   <section id="skills" data-aos="fade-up">
     <h2>My Skills</h2>
 
     <div class="skill">
@@ -235,7 +238,7 @@
             <p>Started</p>
         </div>
 
- </section><section id="projects" class="card">
+ </section> <section id="projects" data-aos="fade-right">
     <h2>🚀 Projects</h2>
 
     <div class="project">
@@ -252,7 +255,7 @@
         <h3>Password Generator</h3>
         <p>Secure random password generator tool.</p>
     </div>
-</section>   <section id="contact" class="card">
+</section>   <section id="contact" data-aos="fade-left">
 
         <h2>📞 Contact</h2>
 
@@ -350,13 +353,19 @@
 
 </footer><button id="topBtn" onclick="topFunction()">⬆</button><footer>
     <p>© 2026 Asad Ali | All Rights Reserved</p>
-</footer>  <script src="script.js"></script>
+</footer><script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <script>
+AOS.init({
+    duration:1000,
+    once:true
+});
+</script>  <script src="script.js"></script>
 </body>
 
 </html>
 
 
 	
+
 
 
 

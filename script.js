@@ -183,3 +183,15 @@ localStorage.setItem("visitorCount", count);
 
 document.getElementById("visitorCount").innerText = count;
 
+const text = "Welcome to My Cyber World...";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+    }
+}
+
+window.onload = typeEffect;

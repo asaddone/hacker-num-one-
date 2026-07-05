@@ -642,3 +642,16 @@ x
     color:#00ff99;
 }
 
+footer{
+    margin-top:50px;
+    padding:30px;
+    text-align:center;
+    background:#050505;
+    border-top:2px solid #00ff99;
+}
+
+footer p{
+    margin:8px;
+    color:#00ff99;
+}
+

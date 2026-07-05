@@ -549,3 +549,48 @@ section{
     background:#00cc00;
 }
 x
+/* ==========================
+   PROJECTS SECTION
+========================== */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.project-card{
+    background:#111;
+    border:2px solid #00ff99;
+    border-radius:12px;
+    padding:20px;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,255,153,.2);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px #00ff99;
+}
+
+.project-card h3{
+    color:#00ff99;
+    margin-bottom:10px;
+}
+
+.project-card p{
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+.done{
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.coming{
+    color:orange;
+    font-weight:bold;
+}
+

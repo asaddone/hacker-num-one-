@@ -177,3 +177,9 @@ function deleteNote(){
     document.getElementById("noteInput").value="";
     alert("🗑️ Note Deleted");
 }
+let count = localStorage.getItem("visitorCount") || 0;
+count++;
+localStorage.setItem("visitorCount", count);
+
+document.getElementById("visitorCount").innerText = count;
+

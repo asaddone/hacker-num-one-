@@ -232,3 +232,32 @@ function drawMatrix() {
 
 setInterval(drawMatrix, 50);
 
+const terminal = document.getElementById("terminal");
+
+const lines = [
+"> Loading skills...",
+"> HTML ✔",
+"> CSS ✔",
+"> JavaScript ✔",
+"> Cyber Security ✔",
+"> GitHub ✔",
+"> Portfolio Ready ✔",
+"> Welcome Recruiter..."
+];
+
+let i = 0;
+
+function typeLine(){
+    if(!terminal || i >= lines.length) return;
+
+    const p = document.createElement("p");
+    p.textContent = lines[i];
+    terminal.appendChild(p);
+
+    i++;
+    setTimeout(typeLine, 700);
+}
+
+window.addEventListener("load", () => {
+    setTimeout(typeLine,1000);
+});

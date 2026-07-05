@@ -1,4 +1,6 @@
-/* ==========================
+ html {
+    scroll-behavior: smooth;
+}   /* ==========================
    GOOGLE FONT
 ========================== */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
@@ -708,3 +710,31 @@ body {
     background: #1a1a1a;
 }
 
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .navbar nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    .project {
+        font-size: 14px;
+    }
+}

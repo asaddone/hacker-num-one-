@@ -132,7 +132,7 @@ function generatePassword(){
 
     document.getElementById("passwordBox").value = password;
 }
-function updateClock(){
+functionupdateClock();{
 
     let now = new Date();
 
@@ -183,84 +183,6 @@ localStorage.setItem("visitorCount", count);
 
 document.getElementById("visitorCount").innerText = count;
 
-const text = "Welcome to My Cyber World...";
-let i = 0;
-
-function typeEffect() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 80);
-    }
-}
-
-window.onload = typeEffect;
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-let letters = "01ASADCYBERHACKER";
-letters = letters.split("");
-
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-
-const drops = [];
-
-for (let x = 0; x < columns; x++)
-    drops[x] = 1;
-
-function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
-            drops[i] = 0;
-
-        drops[i]++;
-    }
-}
-
-setInterval(drawMatrix, 50);
-
-const terminal = document.getElementById("terminal");
-
-const lines = [
-"> Loading skills...",
-"> HTML ✔",
-"> CSS ✔",
-"> JavaScript ✔",
-"> Cyber Security ✔",
-"> GitHub ✔",
-"> Portfolio Ready ✔",
-"> Welcome Recruiter..."
-];
-
-let i = 0;
-
-function typeLine(){
-    if(!terminal || i >= lines.length) return;
-
-    const p = document.createElement("p");
-    p.textContent = lines[i];
-    terminal.appendChild(p);
-
-    i++;
-    setTimeout(typeLine, 700);
-}
-
-window.addEventListener("load", () => {
-    setTimeout(typeLine,1000);
-});
 function counter(id,target){
     let count=0;
     let speed=30;
@@ -275,18 +197,7 @@ function counter(id,target){
     },speed);
 }
 
-counter("projectsCount",15);
-counter("clientsCount",20);
-counter("experienceCount",12);
-let topBtn=document.getElementById("topBtn");
 
-window.onscroll=function(){
-    if(document.body.scrollTop>200 || document.documentElement.scrollTop>200){
-        topBtn.style.display="block";
-    }else{
-        topBtn.style.display="none";
-    }
-};
 
 function topFunction(){
     window.scrollTo({

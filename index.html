@@ -1,18 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+<canvas id="matrix"></canvas>
 
+<header class="navbar">
+    <div class="logo">ASAD<span>DEV</span></div>
+    <nav>
+        <button id="themeBtn">🌙</button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
+<main>
+    <section class="terminal">
+        <div class="terminal-header">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+            <p>root@asad:~</p>
+        </div>
+        <div class="terminal-body" id="terminal">
+            <p>> Initializing Portfolio...</p>
+        </div>
+    </section>
 
+    <section class="hero" id="home">
+        <h1>ASAD ALI</h1>
+        <h3>Cyber Security Student | Future Ethical Hacker</h3>
+        <h3>I am <span id="typing"></span></h3>
+        <p>
+            Learning HTML, CSS, JavaScript, Linux and Ethical Hacking.
+            Building secure websites and improving my skills every day.
+        </p>
 
+        <div class="hero-buttons">
+            <button onclick="welcome()">Start Learning</button>
+            <button onclick="showSkills()">My Skills</button>
+        </div>
 
+        <div class="weather-box">
+            <h2>🌤 Weather</h2>
+            <input type="text" id="city" placeholder="Enter City">
+            <button onclick="getWeather()">Search</button>
+            <div id="weatherResult"></div>
+        </div>
 
+        <div class="clock-box">
+            <h2>🕒 Current Time</h2>
+            <div id="clock">00:00:00</div>
+            <p id="date"></p>
+        </div>
 
+        <div class="hero-buttons">
+            <a href="assets/cv.md" download>
+                <button>📄 Download CV</button>
+            </a>
+        </div>
+    </section>
 
+    <div class="container">
 
+        <section id="about" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm <strong>Asad Ali</strong>, a Cyber Security student who enjoys learning
+                HTML, CSS, JavaScript, Linux, Networking and Ethical Hacking.
+            </p>
+            <p>
+                My goal is to become a professional Ethical Hacker and build secure,
+                modern websites.
+            </p>
+        </section>
 
+        <section id="live-terminal">
+            <h2>Live Terminal</h2>
+            <div class="terminal-box">
+                <p id="terminalText"></p>
+            </div>
+        </section>
 
+        <section id="skills" data-aos="fade-up">
+            <h2>My Skills</h2>
 
+            <div class="skill">
+                <p>HTML - 90%</p>
+                <div class="bar"><div class="html"></div></div>
+            </div>
 
+            <div class="skill">
+                <p>CSS - 80%</p>
+                <div class="bar"><div class="css"></div></div>
+            </div>
 
+            <div class="skill">
+                <p>JavaScript - 60%</p>
+                <div class="bar"><div class="js"></div></div>
+            </div>
 
+            <div class="skill">
+                <p>Linux - 70%</p>
+                <div class="bar"><div class="linux"></div></div>
+            </div>
+        </section>
 
+        <div class="notes-box">
+            <h2>📝 Notes App</h2>
+            <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+            <br>
+            <button onclick="saveNote()">Save Note</button>
+            <button onclick="loadNote()">Load Note</button>
+            <button onclick="deleteNote()">Delete Note</button>
+        </div>
+
+        <section id="stats">
+            <div class="stat-box">
+                <h2 id="projectsCount">0</h2>
+                <p>Projects</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="clientsCount">0</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="experienceCount">0</h2>
+                <p>Months Learning</p>
+            </div>
+        </section>
+
+        <section id="projects" class="card">
+            <h2>🚀 My Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>💻 Hacker Portfolio</h3>
+                    <p>Personal hacker-style portfolio website.</p>
+                    <span class="done">✅ Completed</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>🕒 Digital Clock</h3>
+                    <p>Real-time digital clock using JavaScript.</p>
+                    <span class="done">✅ Completed</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>🌦 Weather App</h3>
+                    <p>Weather search application.</p>
+                    <span class="done">✅ Completed</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>🔐 Password Generator</h3>
+                    <p>Generate strong and secure passwords.</p>
+                    <span class="done">✅ Completed</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>📝 Notes App</h3>
+                    <p>Save and manage notes in browser.</p>
+                    <span class="done">✅ Completed</span>
+                    <div class="project-buttons">
+                        <a href="#" class="btn-project">🌐 Live Demo</a>
+                        <a href="#" class="btn-project">💻 Source Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>📋 To-Do App</h3>
+                    <p>Task management application.</p>
+                    <span class="coming">🚧 Coming Soon</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="website-stats" class="card">
+            <h2>📊 Website Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3 id="visitorCount">0</h3>
+                    <p>Visitors</p>
+                </div>
+                <div class="stat-box">
+                    <h3>7+</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="stat-box">
+                    <h3>2026</h3>
+                    <p>Started</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-left">
+            <h2>📞 Contact</h2>
+            <p>Email: your@email.com</p>
+            <p>Phone: +92XXXXXXXXXX</p>
+        </section>
+
+        <section class="card">
+            <h2>🎯 My Goals</h2>
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Master JavaScript</li>
+                <li>Become a Cyber Security Expert</li>
+            </ol>
+        </section>
+
+        <section id="social" class="card">
+            <h2>🌐 Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="mailto:your@email.com">Email</a>
+            </div>
+        </section>
+
+    </div>
+
+    <section id="calculator">
+        <h2>Calculator</h2>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+
+            <button onclick="addValue('7')">7</button>
+            <button onclick="addValue('8')">8</button>
+            <button onclick="addValue('9')">9</button>
+            <button onclick="addValue('/')">/</button>
+
+            <button onclick="addValue('4')">4</button>
+            <button onclick="addValue('5')">5</button>
+            <button onclick="addValue('6')">6</button>
+            <button onclick="addValue('*')">*</button>
+
+            <button onclick="addValue('1')">1</button>
+            <button onclick="addValue('2')">2</button>
+            <button onclick="addValue('3')">3</button>
+            <button onclick="addValue('-')">-</button>
+
+            <button onclick="addValue('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="addValue('+')">+</button>
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Secure Login</h2>
+        <div class="login-box">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="result"></p>
+        </div>
+    </section>
+
+    <section id="todo">
+        <h2>My To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <section id="password">
+        <h2>Password Generator</h2>
+        <input type="text" id="passwordBox" readonly>
+        <button onclick="generatePassword()">Generate Password</button>
+    </section>
+</main>
+
+<button id="topBtn" onclick="topFunction()">⬆</button>
+
+<footer>
+    <p>© 2026 Asad Ali | Hacker Portfolio</p>
+    <p>Built with ❤️ HTML, CSS & JavaScript</p>
+    <p>All Rights Reserved</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
 

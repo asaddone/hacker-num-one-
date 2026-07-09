@@ -1,6 +1,7 @@
- html {
+html {
     scroll-behavior: smooth;
-}   /* ==========================
+}
+/* ==========================
    GOOGLE FONT
 ========================== */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
@@ -37,8 +38,6 @@
 
     --radius:15px;
     --transition:.3s ease;
-}     html{
-    scroll-behavior: smooth;
 }
 
 /* ==========================
@@ -69,7 +68,9 @@ h2{
 
 h3{
     color:var(--yellow);
-}   header{
+}
+
+header{
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -98,7 +99,9 @@ a{
 a:hover{
     color:var(--green);
     text-shadow:var(--shadow);
-}nav a{
+}
+
+nav a{
     transition:0.3s;
 }
 
@@ -152,7 +155,8 @@ section{
     background:var(--green);
     color:#000;
 }
-   /* ==========================
+
+/* ==========================
    HERO SECTION
 ========================== */
 
@@ -226,7 +230,8 @@ section{
     margin: 30px 0;
     transition: .3s ease;
     box-shadow: 0 0 10px rgba(0,255,65,.2);
-} 
+}
+
 #typing{
     color:#00e5ff;
     font-size:30px;
@@ -235,6 +240,7 @@ section{
     margin-top:20px;
     min-height:40px;
 }
+
 .card:hover{
     transform: translateY(-8px);
     box-shadow: 0 0 20px var(--green);
@@ -247,6 +253,7 @@ section{
 .card p{
     line-height: 1.8;
 }
+
 #matrix{
     position:fixed;
     top:0;
@@ -296,6 +303,7 @@ section{
         width:0;
     }
 }
+
 .terminal-box{
     background:#000;
     color:#00ff00;
@@ -308,6 +316,7 @@ section{
     min-height:180px;
     box-shadow:0 0 20px #00ff00;
 }
+
 .calculator{
     width:320px;
     margin:40px auto;
@@ -377,6 +386,7 @@ section{
     margin-top:15px;
     color:#00ff00;
 }
+
 #todo{
     width:90%;
     max-width:600px;
@@ -421,6 +431,7 @@ section{
     border:1px solid #00ff00;
     border-radius:5px;
 }
+
 #password{
     width:90%;
     max-width:600px;
@@ -448,7 +459,9 @@ section{
 
 #password button:hover{
     background:#00cc00;
-}.clock-box{
+}
+
+.clock-box{
     margin:40px auto;
     width:300px;
     padding:20px;
@@ -473,6 +486,7 @@ section{
     text-shadow:0 0 10px #00ff00,
                  0 0 20px #00ff00;
 }
+
 #date{
     color:#00ff00;
     font-size:18px;
@@ -481,6 +495,7 @@ section{
     text-shadow:0 0 10px #00ff00;
     font-family:monospace;
 }
+
 .weather-box{
     width:350px;
     margin:30px auto;
@@ -509,6 +524,7 @@ section{
     cursor:pointer;
     font-weight:bold;
 }
+
 .notes-box{
     width:400px;
     margin:30px auto;
@@ -550,7 +566,7 @@ section{
 .notes-box button:hover{
     background:#00cc00;
 }
-x
+
 /* ==========================
    PROJECTS SECTION
 ========================== */
@@ -657,13 +673,6 @@ footer p{
     color:#00ff99;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
-    color: #00ff88;
-}
-
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -697,6 +706,7 @@ body {
     color: white;
     text-shadow: 0 0 10px #00ff88;
 }
+
 .project {
     background: #111;
     padding: 15px;
@@ -709,61 +719,6 @@ body {
     transform: translateX(10px);
     background: #1a1a1a;
 }
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar nav {
-        margin-top: 10px;
-    }
-
-    .navbar nav a {
-        display: inline-block;
-        margin: 8px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero h3 {
-        font-size: 16px;
-    }
-
-    .project {
-        font-size: 14px;
-    }
-}
-.bar {
-    width: 100%;
-    height: 10px;
-    background: #222;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.bar div {
-    height: 100%;
-    width: 0;
-    background: #00ff88;
-    transition: 2s ease-in-out;
-}
-
-.html { width: 90%; }
-.css { width: 80%; }
-.js { width: 60%; }
-.linux { width: 70%; }  #matrix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: black;
-} 
 
 .social-links a {
     display: inline-block;
@@ -779,19 +734,8 @@ body {
     background: #00ff88;
     color: black;
     transform: scale(1.1);
-}  .card {
-    background: rgba(0,0,0,0.7);
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #00ff88;
-    border-radius: 10px;
-    transition: 0.3s;
 }
 
-.card:hover {
-    box-shadow: 0 0 20px #00ff88;
-    transform: translateY(-5px);
-} 
 /* ==========================
    TERMINAL
 ========================== */
@@ -856,23 +800,6 @@ body {
     color:var(--cyan);
 }
 
-.skill{
-    margin-bottom:25px;
-}
-
-.skill p{
-    margin-bottom:8px;
-    font-weight:bold;
-}
-
-.bar{
-    width:100%;
-    background:#222;
-    border-radius:30px;
-    overflow:hidden;
-    height:25px;
-}
-
 .fill{
     height:100%;
     display:flex;
@@ -882,6 +809,7 @@ body {
     color:#000;
     font-weight:bold;
     background: linear-gradient(90deg,#00ff88,#00e5ff);
+}
 
 /* ==========================
    STATS
@@ -917,6 +845,7 @@ body {
 .stat-box p{
     margin-top:10px;
 }
+
 /* ==========================
    SCROLL TO TOP BUTTON
 ========================== */
@@ -940,56 +869,6 @@ body {
 
 #topBtn:hover{
     transform:scale(1.1);
-}
-
-/* ==========================
-   FOOTER
-========================== */
-
-footer{
-    text-align:center;
-    padding:25px;
-    background:#111;
-    border-top:2px solid var(--cyan);
-    margin-top:60px;
-}
-
-footer p{
-    color:#aaa;
-}
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .hero{
-        text-align:center;
-    }
-
-    .projects{
-        grid-template-columns:1fr;
-    }
-
-    #stats{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    #skills{
-        padding:50px 20px;
-    }
-}
-#typing{
-    color: var(--cyan);
-    font-weight: bold;
-    border-right: 2px solid var(--cyan);
-    padding-right: 5px;
 }
 
 /* ==========================
@@ -1049,47 +928,74 @@ footer p{
     100%{
         transform:rotate(360deg);
     }
-} 
-/* ========== Responsive Design ========== */
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
 
 @media (max-width: 768px) {
 
-  nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-  }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+    .navbar nav {
+        margin-top: 10px;
+    }
 
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
+    .navbar nav a {
+        display: inline-block;
+        margin: 8px;
+    }
 
-  .hero-content {
-    width: 100%;
-  }
+    .hero h1 {
+        font-size: 28px;
+    }
 
-  .hero img {
-    width: 220px;
-    margin-top: 20px;
-  }
+    .hero h3 {
+        font-size: 16px;
+    }
 
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
+    .project {
+        font-size: 14px;
+    }
 
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
-  .contact-container {
-    width: 100%;
-  }
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero img {
+        width: 220px;
+        margin-top: 20px;
+    }
+
+    .projects-container,
+    .projects{
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    #stats{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #skills{
+        padding:50px 20px;
+    }
 }

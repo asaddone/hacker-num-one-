@@ -1,5 +1,5 @@
 function welcome() {
-    alert("👋 Welcome Asad! Let's Learn Web Development.");
+alert("script loaded");    alert("👋 Welcome Asad! Let's Learn Web Development.");
 }
 
 function showSkills() {
@@ -15,8 +15,7 @@ function typeEffect() {
         setTimeout(typeEffect, 80);
     }
 }
-
-window.onload = typeEffect;
+window.addEventListener("load", typeEffect);
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
@@ -72,8 +71,7 @@ function terminalEffect() {
     }
 }
 
-terminalEffect();
-function addValue(value){
+terminalEffect(); function addValue(value){
     document.getElementById("display").value += value;
 }
 
@@ -89,99 +87,8 @@ function calculate(){
         document.getElementById("display").value = "Error";
     }
 }
-function login(){
 
-    const user = document.getElementById("username").value;
 
-    const pass = document.getElementById("password").value;
-
-    if(user==="asad" && pass==="1234"){
-        document.getElementById("result").innerHTML="✅ Login Successful";
-    }else{
-        document.getElementById("result").innerHTML="❌ Invalid Username or Password";
-    }
-
-}
-function addTask(){
-
-    const input = document.getElementById("taskInput");
-
-    if(input.value.trim() === ""){
-        alert("Please enter a task!");
-        return;
-    }
-
-    const li = document.createElement("li");
-
-    li.textContent = input.value;
-
-    document.getElementById("taskList").appendChild(li);
-
-    input.value = "";
-}
-
-function generatePassword(){
-
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-
-    let password = "";
-
-    for(let i=0; i<12; i++){
-        password += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-
-    document.getElementById("passwordBox").value = password;
-}
-functionupdateClock();{
-
-    let now = new Date();
-
-    let hours = String(now.getHours()).padStart(2,'0');
-    let minutes = String(now.getMinutes()).padStart(2,'0');
-    let seconds = String(now.getSeconds()).padStart(2,'0');
-
-    document.getElementById("clock").innerHTML =
-    hours + ":" + minutes + ":" + seconds;
-}
-
-setInterval(updateClock,1000);
-updateClock;function updateDate() {
-    const now = new Date();
-
-    const options = {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    };
-
-    document.getElementById("date").textContent =
-        now.toLocaleDateString("en-US", options);
-}
-
-updateDate();
-
-function saveNote(){
-    let note=document.getElementById("noteInput").value;
-    localStorage.setItem("myNote",note);
-    alert("✅ Note Saved");
-}
-
-function loadNote(){
-    document.getElementById("noteInput").value=
-    localStorage.getItem("myNote") || "";
-}
-
-function deleteNote(){
-    localStorage.removeItem("myNote");
-    document.getElementById("noteInput").value="";
-    alert("🗑️ Note Deleted");
-}
-let count = localStorage.getItem("visitorCount") || 0;
-count++;
-localStorage.setItem("visitorCount", count);
-
-document.getElementById("visitorCount").innerText = count;
 
 function counter(id,target){
     let count=0;
@@ -205,19 +112,7 @@ function topFunction(){
         behavior:"smooth"
     });
 }
-const words = [
-    "Web Developer",
-    "Frontend Developer",
-    "Cyber Security Student",
-    "Programmer"
-];
 
-let i = 0;
-let j = 0;
-let currentWord = "";
-let isDeleting = false;
-
-function typeEffect(){
 
     currentWord = words[i];
 
@@ -265,3 +160,6 @@ window.addEventListener("load",function(){
     document.getElementById("loader").style.display="none";
 
 });
+document.getElementById("clock").innerHTML = "TEST";
+
+

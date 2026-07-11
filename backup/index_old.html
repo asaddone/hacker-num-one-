@@ -189,6 +189,20 @@
           </div>
         </article>
 
+        <article class="project-card" data-search="weather app api javascript fetch">
+          <div class="project-top">
+            <h3>Weather Lookup</h3>
+            <span class="status-badge done">Live</span>
+          </div>
+          <p>A small tool that fetches live weather for any city using a public API,
+             built to practice async JavaScript and error handling.</p>
+          <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Fetch API</span></div>
+          <div class="project-links">
+            <a href="#labs">Try it in Labs →</a>
+            <a href="https://github.com/asaddone/hacker-num-one-/blob/main/script.js" target="_blank" rel="noopener">Source Code →</a>
+          </div>
+        </article>
+
         <article class="project-card" data-search="password generator security random javascript">
           <div class="project-top">
             <h3>Password Generator</h3>
@@ -285,6 +299,15 @@
       <div class="labs-grid">
 
         <div class="lab-box">
+          <h3>🌤 Weather Lookup</h3>
+          <div class="lab-controls">
+            <input type="text" id="city" placeholder="Enter a city">
+            <button onclick="getWeather()">Search</button>
+          </div>
+          <div id="weatherResult" class="lab-output"></div>
+        </div>
+
+        <div class="lab-box">
           <h3>🔐 Password Generator</h3>
           <div class="lab-controls">
             <input type="text" id="passwordBox" readonly>
@@ -376,3 +399,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+

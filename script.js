@@ -178,27 +178,7 @@ window.deleteNote = deleteNote;
 // ==========================================================
 // CALCULATOR
 // ==========================================================
-async function getWeather() {
-  const cityInput = document.getElementById("city");
-  const resultBox = document.getElementById("weatherResult");
-  if (!cityInput || !resultBox) return;
 
-  const city = cityInput.value.trim();
-  if (!city) {
-    resultBox.textContent = "Please enter a city name.";
-    return;
-  }
-
-  resultBox.textContent = "Loading...";
-
-  try {
-    const response = await fetch(`https://wttr.in/${encodeURIComponent(city)}?format=%C+%t`);
-    if (!response.ok) throw new Error("Request failed");
-    const data = await response.text();
-    resultBox.textContent = `${city}: ${data}`;
-  } catch (error) {
-    resultBox.textContent = "Could not fetch weather. Try again.";
-  }
 }  function addValue(value) {
   const display = document.getElementById("display");
   if (display) display.value += value;
@@ -352,7 +332,7 @@ const termCommands = {
   skills: () =>
     "HTML, CSS, JavaScript, Linux (developing)\nCurrently studying: Networking, Kali Linux, OWASP Top 10, CTF practice",
   projects: () =>
-    "1. Hacker-Themed Portfolio (this site)\n2. Weather Lookup\n3. Password Generator\n4. Notes App\n5. Calculator\n6. To-Do List (in progress)\n\nScroll to the Projects section to see details.",
+    "1. Hacker-Themed Portfolio (this site)\n2.\n3. Password Generator\n4. Notes App\n5. Calculator\n6. To-Do List (in progress)\n\nScroll to the Projects section to see details.",
   contact: () => "Email: your@email.com\nGitHub: github.com/asaddone",
   education: () => "Currently studying Cyber Security, focused on ethical hacking fundamentals.",
 };
@@ -396,5 +376,7 @@ if (termInput) {
 
 // Focus terminal input when its section is clicked
 document.querySelector(".terminal")?.addEventListener("click", () => termInput?.focus());
+
+
 
 
